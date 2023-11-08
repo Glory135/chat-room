@@ -90,9 +90,19 @@ main .chat-body .chats-container .chat .chat-main .details img {
 main .chat-body .chats-container .chat .chat-main .details h2 {
   text-transform: capitalize;
 }
+@media (max-width: 700px) {
+  main .chat-body .chats-container .chat .chat-main .details h2 {
+    font-size: 13px;
+  }
+}
 main .chat-body .chats-container .chat .chat-main .details span {
   color: #bebebe;
   font-size: 13px;
+}
+@media (max-width: 700px) {
+  main .chat-body .chats-container .chat .chat-main .details span {
+    font-size: 11px;
+  }
 }
 main .chat-body .chats-container .input-container {
   width: 100%;

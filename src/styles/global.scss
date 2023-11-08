@@ -91,12 +91,20 @@ main {
 						}
 
 						& h2 {
-							text-transform: capitalize
+							text-transform: capitalize;
+
+							@include sm {
+								font-size: 13px;
+							}
 						}
 
 						& span {
 							color: $light_text;
 							font-size: 13px;
+							
+							@include sm {
+								font-size: 11px;
+							}
 						}
 					}
 				}
