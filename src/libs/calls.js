@@ -1,6 +1,6 @@
 import axios from "axios"
 
-const BASE_URL = 'http://localhost:3000/api'
+const BASE_URL = 'https://chat-room-sooty.vercel.app/api'
 
 // using axios to make api requests
 
