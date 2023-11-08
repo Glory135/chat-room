@@ -1,0 +1,144 @@
+@import './scssComponents/variables';
+
+// some boiler plate styles
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	font-family: 'josefin Sans', sans-serif;
+	font-size: 15px;
+	transition: 0.2s ease-out;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+main {
+	width: 100vw;
+	min-height: 100vh;
+	height: auto;
+
+	& .chat-body {
+		width: 100%;
+		min-height: 90vh;
+		height: auto;
+		background-color: $dark_bg;
+		@include position(flex-start, center);
+
+		& .chats-container {
+			width: 70%;
+			min-height: 90vh;
+			height: auto;
+			background-color: white;
+			padding: 10px;
+
+			@include sm {
+				width: 100%;
+			}
+
+			& p {
+				text-align: center;
+				padding: 20px 0;
+			}
+
+			& .chat {
+				width: 100%;
+				height: auto;
+				display: flex;
+
+				&.you {
+					justify-content: flex-end;
+
+					& .chat-main {
+						border-bottom: 2px solid $primary;
+
+						& .details {
+							flex-direction: row-reverse;
+						}
+					}
+				}
+
+				& .chat-main {
+					padding: 20px;
+					border-bottom: 3px solid red;
+					max-width: 70%;
+					box-shadow: $shadow-sm;
+					margin: 20px 0;
+
+					@include sm {
+						max-width: 90%;
+					}
+
+					& .details {
+						display: flex;
+						align-items: center;
+						gap: 20px;
+						margin-bottom: 10px;
+
+						& img {
+							width: 30px;
+							height: 30px;
+							border-radius: 50%
+						}
+
+						& h2 {
+							text-transform: capitalize
+						}
+
+						& span {
+							color: $light_text;
+							font-size: 13px;
+						}
+					}
+				}
+			}
+
+			& .input-container {
+				width: 100%;
+				height: 25vh;
+				margin: 40px 0;
+				@include position(center, flex-start, column);
+				gap: 20px;
+
+				& textarea {
+					width: 80%;
+					height: 90%;
+					padding: 10px;
+					border-radius: 5px;
+					resize: none;
+
+					@include sm {
+						width: 100%;
+					}
+				}
+
+				& button {
+					color: white;
+					width: 80%;
+					background-color: $primary;
+					border-radius: 10px;
+					border: none;
+					padding: 10px 20px;
+					cursor: pointer;
+					@include click-animation;
+
+					@include sm {
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+
+	// components
+	@import './components/header';
+}
